@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>unitncal</title>
+  <meta name="description" content="Sincronizza nativamente il tuo calendario con gli orari dell'università di Trento!">
+  <meta name="keywords" content="unitn,ical,icalendar,università,trento,calendario,orari,corsi">
+  <meta name="author" content="Francesco Gazzetta">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mini-default.min.css">
+  <script src="URI.min.js"></script>
+  <script src="convert.js"></script>
+</head>
+<body onload="run();">
+  <h1>unitncal</h1>
+  <p><strong>Sincronizza nativamente il tuo calendario con gli orari dell'università di Trento!</strong></p>
+  <div id="procedura">
+    <section>
+      <h3>1: Trova il tuo calendario su easyroom</h3>
+      <div>
+        <p>
+          Vai su
+          <a href="https://easyroom.unitn.it/Orario/index.php?view=easycourse&include=corso">easyroom</a>
+          e tramite i menu a tendina segli il tuo corso, per poi cliccare su
+          "Mostra orario".
+          Una volta apparso l'orario, deseleziona eventuali corsi che non ti
+          interessano togliendo la spunta alle caselle in basso a destra.
+          Infine <strong>clicca sul pulsante "Calendario completo"</strong>
+          (potrebbe non essere visibile da cellulare) e, una volta completato il
+          (lungo) caricamento, copia l'indirizzo della pagina
+          (è qualcosa del tipo <kbd>https://easyroom.unitn.it/Orario/…</kbd>).
+        </p>
+      </div>
+    </section>
+    <section>
+      <h3>2: Incolla qui l'indirizzo che hai copiato da easyroom</h3>
+      <input
+        type="url"
+        id="uri_in"
+        name="myURL"
+        placeholder="Esempio: https://easyroom.unitn.it/Orario/index.php?view=easycourse&include=corso"
+        style="width: 85%;"
+      ></input>
+    </section>
+    <section>
+      <h3>3: Copia l'url generato e inseriscilo nel tuo calendario:</h3>
+      <input
+        type="text"
+        readonly
+        id="uri_out"
+        name="result"
+        placeholder="Incolla l'URL nella casella di testo in alto per generare il link al calendario"
+        style="width: 85%;"
+      ></input>
+      <div>
+        <p>
+          Ora è sufficiente copiare il link qui sopra e aggiungerlo al tuo
+          calendario.
+          La procedura varia a seconda del dispositivo/programma/applicazione.
+          Qui di seguito alcuni esempi:
+        </p>
+        <ul>
+          <li><a href="ios.html">iOS</a></li>
+          <li><a href="android.html">Android</a></li>
+          <li><a href="ubuntu.html">Ubuntu</a></li>
+          <li><a href="windows10.html">Windows 10</a></li>
+        </ul>
+      </div>
+    <section>
+  </div>
+  <footer role="contentinfo">
+
+  <p>Sviluppato da <a href="http://fgaz.me">Francesco Gazzetta</a></p>
+  <p>Sorgenti: <a href="https://github.com/fgaz/unitncal">https://github.com/fgaz/unitncal</a></p>
+
+</footer>
+</body>
+</html>
+
