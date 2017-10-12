@@ -1,3 +1,9 @@
+function preview(url){
+  document.getElementById("preview").innerHTML = "<iframe id='cv_if5' src='http://cdn.instantcal.com/cvir.html?id=cv_nav5&file="
+  + URI.encode(URI.decode(url))
+  + "&theme=RE&ccolor=%23ffffc0&dims=1&gtype=cv_daygrid&gcloseable=0&gnavigable=1&gperiod=day5&itype=cv_simpleevent' allowTransparency=true scrolling='no' frameborder=0 height=600 width=800></iframe>";
+}
+
 function run(){
   let text_in  = document.getElementById("uri_in");
   let text_out = document.getElementById("uri_out");
@@ -39,8 +45,10 @@ function run(){
         text_out.value = "URL non riconosciuto";
         return;
     }
-    text_out.value = new_uri.toString()
+    final_uri = new_uri.toString()
       + "&dummyext.ics"; // needed for gnome-calendar and other programs taht require an .ics extension
+    text_out.value = final_uri;
+    preview(final_uri);
   }
   text_in.onchange   = updater;
   text_in.onkeypress = updater;
