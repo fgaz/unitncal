@@ -52,5 +52,6 @@ function run(){
   }
   text_in.onchange   = updater;
   text_in.onkeypress = updater;
+  text_in.onpaste    = updater; //Warning: non-standard
 }
 
