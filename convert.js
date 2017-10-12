@@ -8,7 +8,7 @@ function run(){
   let text_in  = document.getElementById("uri_in");
   let text_out = document.getElementById("uri_out");
 
-  let updater = function(){
+  let updater = function(){window.setTimeout(function(){
     let uri = URI(text_in.value);
     let new_uri = new URI({
       protocol: "https",
@@ -49,7 +49,7 @@ function run(){
       + "&dummyext.ics"; // needed for gnome-calendar and other programs taht require an .ics extension
     text_out.value = final_uri;
     preview(final_uri);
-  }
+  }, 100);} // Leave it a bit of time to completely paste the url. Ugly but it works.
   text_in.onchange   = updater;
   text_in.onkeypress = updater;
   text_in.onpaste    = updater; //Warning: non-standard
