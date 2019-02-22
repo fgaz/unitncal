@@ -22,9 +22,16 @@ function run(){
         });
         break;
       case "docente":
-        //TODO put this in a red box
-        text_out.value = "Calendari per docente non ancora supportati. Contattami per richiedere la funzione.";
-        return;
+        new_uri.search(
+          { "form-type": "docente"
+          , "anno": old_search["anno"]
+          , "docente": old_search["docente"]
+          , "date": old_search["date"] // needed to avoid getting lectures of first semester when downloading last semester
+          , "attivita": old_search["attivita"]
+          , "ar_codes_": old_search["ar_codes_"]
+          , "ar_select_": old_search["ar_select_"]
+        });
+       break;
       case "attivita":
         new_uri.search(
           { "form-type": "attivita"
