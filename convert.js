@@ -6,8 +6,8 @@ function run(){
     let uri = URI(text_in.value);
     let new_uri = new URI({
       protocol: "https",
-      hostname: "easyroom.unitn.it",
-      path: "/Orario/ec_download_ical_list.php",
+      hostname: "easyacademy.unitn.it",
+      path: "/AgendaStudentiUnitn/ec_download_ical_list.php",
     });
     old_search = uri.search(true);
     switch (old_search["include"]) {
@@ -16,7 +16,7 @@ function run(){
           { "form-type": "corso"
           , "anno": old_search["anno"]
           , "corso": old_search["corso"]
-          , "anno2": old_search["anno2"]
+          , "anno2[]": old_search["anno2[]"]
           , "ar_codes_": old_search["ar_codes_"]
           , "ar_select_": old_search["ar_select_"]
         });
