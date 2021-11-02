@@ -13,7 +13,7 @@ function run(){
     switch (old_search["include"]) {
       case "corso":
         new_uri.search(
-          { "form-type": "corso"
+          { "include": "corso"
           , "anno": old_search["anno"]
           , "corso": old_search["corso"]
           , "anno2[]": old_search["anno2[]"]
@@ -23,7 +23,7 @@ function run(){
         break;
       case "docente":
         new_uri.search(
-          { "form-type": "docente"
+          { "include": "docente"
           , "anno": old_search["anno"]
           , "docente": old_search["docente"]
           , "date": old_search["date"] // needed to avoid getting lectures of first semester when downloading last semester
@@ -34,9 +34,9 @@ function run(){
        break;
       case "attivita":
         new_uri.search(
-          { "form-type": "attivita"
+          { "include": "attivita"
           , "anno": old_search["anno"]
-          , "attivita": old_search["attivita"]
+          , "attivita[]": old_search["attivita[]"]
           , "ar_codes_": old_search["ar_codes_"]
           , "ar_select_": old_search["ar_select_"]
         });
