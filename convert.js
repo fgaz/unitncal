@@ -7,7 +7,7 @@ function run(){
     let new_uri = new URI({
       protocol: "https",
       hostname: "easyacademy.unitn.it",
-      path: "/AgendaStudentiUnitn/ec_download_ical_list.php",
+      path: "/AgendaStudentiUnitn/export/ec_download_ical_list.php",
     });
     old_search = uri.search(true);
     switch (old_search["include"]) {
